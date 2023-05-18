@@ -1,10 +1,8 @@
 import { useDispatch ,useSelector} from "react-redux";
 import {increment,decrement,resetHandler} from './Redux/slices/couterSlice'
-import { useState } from "react";
 const Counter = () =>{
     const count = useSelector((state) => state.counter.value);
     const dispatch = useDispatch();
-    const [isClick,setClick] = useState(false);
     return(
             <div className="flex flex-col justify-center">
                 <h1 className="text-center text-slate-300 my-5 text-xl font-semibold">Increment and Decrement</h1>
